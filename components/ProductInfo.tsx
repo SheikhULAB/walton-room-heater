@@ -43,36 +43,72 @@ const ProductInfo: React.FC<ProductInfoProps> = ({
 
   return (
     <div className="max-w-sm w-full bg-white border border-gray-200 rounded-md shadow-sm p-4 space-y-4">
-      {/* Product Title (uppercase, bold) */}
-      <h1 className="text-lg font-black uppercase tracking-wide">{title}</h1>
+    
+      <h1
+        className="
+  font-semibold 
+  text-2xl 
+  leading-[31px] 
+  text-[#202020] 
+  uppercase 
+  tracking-wide 
+  font-roboto
+"
+      >
+        {title}
+      </h1>
 
-      {/* Pricing row: new price in green, old price (if any) with line-through */}
       <div className="flex items-baseline space-x-2">
-        <p className="text-2xl font-semibold text-green-600">Tk {newPrice}</p>
-        {oldPrice && (
-          <p className="text-gray-500 line-through text-sm">Tk {oldPrice}</p>
-        )}
-      </div>
+  {/* New Price: Roboto 700, #288C53, 22px/22px */}
+  <p className="
+    text-[22px]
+    leading-[22px]
+    font-bold
+    text-[#288C53]
+    font-roboto
+  ">
+    Tk {newPrice}
+  </p>
 
-      {/* Basic Info: brand, model, type, heating element, rated power */}
-      <ul className="text-sm space-y-1">
-        <li>
-          <span className="font-semibold">Brand:</span> {brand}
-        </li>
-        <li>
-          <span className="font-semibold">Model:</span> {model}
-        </li>
-        <li>
-          <span className="font-semibold">Type:</span> {type}
-        </li>
-        <li>
-          <span className="font-semibold">Heating Element:</span>{" "}
-          {heatingElement}
-        </li>
-        <li>
-          <span className="font-semibold">Rated Power:</span> {ratedPower}
-        </li>
-      </ul>
+  {/* Old Price: Roboto 300, #202020, 18px/22px, line-through */}
+  {oldPrice && (
+    <p className="
+      text-[18px]
+      leading-[22px]
+      font-light
+      text-[#202020]
+      line-through
+      font-roboto
+    ">
+      Tk {oldPrice}
+    </p>
+  )}
+</div>
+
+
+<ul className="space-y-1">
+  <li className="text-[14px] leading-[22px] text-[#696969] font-roboto">
+    <span className="font-bold">Brand:</span>{" "}
+    <span className="font-normal">{brand}</span>
+  </li>
+  <li className="text-[14px] leading-[22px] text-[#696969] font-roboto">
+    <span className="font-bold">Model:</span>{" "}
+    <span className="font-normal">{model}</span>
+  </li>
+  <li className="text-[14px] leading-[22px] text-[#696969] font-roboto">
+    <span className="font-bold">Type:</span>{" "}
+    <span className="font-normal">{type}</span>
+  </li>
+  <li className="text-[14px] leading-[22px] text-[#696969] font-roboto">
+    <span className="font-bold">Heating Element:</span>{" "}
+    <span className="font-normal">{heatingElement}</span>
+  </li>
+  <li className="text-[14px] leading-[22px] text-[#696969] font-roboto">
+    <span className="font-bold">Rated Power:</span>{" "}
+    <span className="font-normal">{ratedPower}</span>
+  </li>
+</ul>
+
 
       {/* Small "Status" card (bordered box) */}
       <div className="border rounded p-3 bg-gray-50 space-y-1">

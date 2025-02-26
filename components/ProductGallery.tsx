@@ -9,10 +9,11 @@ const ProductGallery: React.FC = () => {
 
   return (
     <div className="max-w-sm w-full bg-white border border-gray-200 rounded-md shadow-sm p-4 space-y-4">
-      <div className="relative border rounded shadow-md bg-white p-4">
-        <div className="absolute top-2 right-2 bg-black text-white text-xs font-bold px-2 py-1 rounded">
-          SAVE 13%
-        </div>
+      <div className="relative  rounded bg-white p-4">
+      <div className="absolute top-2 right-2 bg-black text-white text-[12px] leading-[22px] font-semibold px-2 py-1 rounded">
+  SAVE 13%
+</div>
+
 
         {/* Main Image */}
         <img

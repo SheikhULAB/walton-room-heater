@@ -8,6 +8,7 @@ import {
   Mail,
   Linkedin,
   Copy,
+  Share
 } from 'lucide-react';
 
 // Example custom inline SVG icons for brands not included in Lucide
@@ -100,56 +101,82 @@ const ProductSidebar: React.FC = () => {
     <div className="w-full md:w-1/3 bg-white border border-gray-200 rounded-md p-4 text-gray-700 space-y-6">
       {/* Delivery Section */}
       <div>
-        <h2 className="flex items-center text-lg font-black mb-2">
-          <Truck className="w-5 h-5 text-gray-600 mr-2" />
-          Delivery
-        </h2>
+      <h2 className="flex items-center text-[20px] leading-[26px] font-bold text-[#202020] mb-2">
+  <Truck
+    className="w-[18px] h-[18px] text-[#202020] font-black mr-2"
+    style={{ fontFamily: '"Font Awesome 6 Pro", sans-serif' }}
+  />
+  Delivery
+</h2>
         <div className="ml-6 space-y-2 text-sm">
-          <div>
-            <p className="font-black">Standard Delivery</p>
-            <p>3-5 working days</p>
-          </div>
+        <div>
+  <p className="text-[14px] leading-[18px] font-bold text-[#202020] font-roboto">
+    Standard Delivery
+  </p>
+  <p className="text-[14px] leading-[22px] font-normal text-[#696969] font-roboto">
+    3-5 working days
+  </p>
+</div>
+
           <div className="flex items-start">
-            <BadgeDollarSign className="w-5 h-5 text-gray-600 mr-2 mt-1" />
-            <div>
-              <p className="font-black">Booking Money Required</p>
-              <p>Booking money: b300</p>
-            </div>
+          
+          <div>
+  <p className="text-[14px] leading-[18px] font-bold text-[#202020] font-roboto">
+    Booking Money Required
+  </p>
+  <p className="text-[14px] leading-[22px] font-normal text-[#696969] font-roboto">
+    Booking money: b300
+  </p>
+</div>
+
           </div>
         </div>
       </div>
 
       {/* Service Section */}
       <div>
-        <h2 className="flex items-center text-lg font-black mb-2">
-          <ShieldCheck className="w-5 h-5 text-gray-600 mr-2" />
-          Service
-        </h2>
-        <div className="ml-6 space-y-2 text-sm">
-          <p className="font-extrabold">100% Authentic</p>
-          <p className="font-extrabold">6 months brand warranty</p>
-          <a
-            href="#"
-            className="text-blue-600 hover:underline inline-block"
-          >
-            Click here for product warranty policy
-          </a>
-        </div>
+      <h2 className="flex items-center mb-2 text-[20px] leading-[26px] font-bold text-[#202020] font-roboto">
+  <ShieldCheck
+    className="w-[18px] h-[18px] text-[#202020] font-black mr-2"
+    style={{ fontFamily: '"Font Awesome 6 Pro", sans-serif' }}
+  />
+  Service
+</h2>
+
+<div className="ml-6 space-y-2 text-[14px] leading-[18px] text-[#202020] font-roboto">
+  <p className="font-bold">100% Authentic</p>
+  <p className="font-bold">6 months brand warranty</p>
+  <a
+    href="#"
+    className="text-[#2D4BA8] text-[14px] leading-[22px] font-normal hover:underline inline-block"
+  >
+    Click here for product warranty policy
+  </a>
+</div>
+
       </div>
 
-      {/* Sold By Section */}
-      <div>
-        <h2 className="flex items-center text-lg font-black mb-2">
-          <Shield className="w-5 h-5 text-gray-600 mr-2" />
-          Sold By
-        </h2>
-        <p className="ml-6 text-sm font-extrabold">Walton Home Appliances</p>
-      </div>
+     {/* Sold By Section */}
+<div>
+  <h2 className="flex items-center text-[20px] leading-[26px] font-bold text-[#202020] mb-2">
+    <Shield className="w-5 h-5 text-[#606060] mr-2" />
+    Sold By
+  </h2>
+  <p className="ml-6 text-[14px] leading-[22px] font-bold text-[#010106] underline">
+    Walton Home Appliances
+  </p>
+</div>
+
 
       {/* Share Section */}
       <div>
-        <h2 className="text-lg font-black mb-2">Share</h2>
-        <div className="flex flex-wrap gap-3 text-gray-600 ml-1">
+
+<h2 className="flex items-center text-[20px] leading-[26px] font-bold text-[#202020] mb-2">
+  <Share className="w-[18px] h-[18px] text-[#202020] font-extrabold mr-2" />
+  Share
+</h2>
+
+        <div className="flex flex-wrap gap-3 text-gray-600 ml-1 mt-4">
           {/* Facebook */}
           <a
             href="#"
