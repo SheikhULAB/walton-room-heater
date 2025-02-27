@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from 'react';
+import RelatedProducts from './RelatedProducts';
+import WaltonHeaterDescription from './WaltonHeaterDescription';
 
 const ProductTabs: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'Description' | 'Reviews'>('Description');
@@ -33,10 +35,15 @@ const ProductTabs: React.FC = () => {
       {/* Content Area */}
       <div className="mt-4 text-[14px] leading-[22px] font-bold font-roboto text-[#202020]">
         {activeTab === 'Description' && (
-          <div>Walton Room Heater | Model: WRH-PTC0X</div>
+          <div>
+            <WaltonHeaterDescription />
+            <RelatedProducts />
+          </div>
         )}
         {activeTab === 'Reviews' && (
-          <p className="text-gray-600">No reviews available.</p>
+          <div>
+          <RelatedProducts />
+         </div>
         )}
       </div>
     </div>

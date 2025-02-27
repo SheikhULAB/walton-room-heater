@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Truck,
-  BadgeDollarSign,
   ShieldCheck,
   Shield,
   Facebook,
@@ -11,10 +10,7 @@ import {
   Share
 } from 'lucide-react';
 
-// Example custom inline SVG icons for brands not included in Lucide
-// (You can replace these with official brand SVGs if desired)
-
-// X (formerly Twitter)
+// Example custom icons (X, WhatsApp, Telegram, Skype, Pocket, Messenger)
 const XIcon = () => (
   <svg
     width="20"
@@ -31,7 +27,6 @@ const XIcon = () => (
   </svg>
 );
 
-// WhatsApp
 const WhatsAppIcon = () => (
   <svg
     width="20"
@@ -44,7 +39,6 @@ const WhatsAppIcon = () => (
   </svg>
 );
 
-// Telegram
 const TelegramIcon = () => (
   <svg
     width="20"
@@ -57,7 +51,6 @@ const TelegramIcon = () => (
   </svg>
 );
 
-// Skype
 const SkypeIcon = () => (
   <svg
     width="20"
@@ -70,7 +63,6 @@ const SkypeIcon = () => (
   </svg>
 );
 
-// Pocket
 const PocketIcon = () => (
   <svg
     width="20"
@@ -83,7 +75,6 @@ const PocketIcon = () => (
   </svg>
 );
 
-// Messenger
 const MessengerIcon = () => (
   <svg
     width="20"
@@ -98,84 +89,72 @@ const MessengerIcon = () => (
 
 const ProductSidebar: React.FC = () => {
   return (
-    <div className="w-full md:w-1/3 bg-white border border-gray-200 rounded-md p-4 text-gray-700 space-y-6">
+    <div className="w-full h-full bg-white border border-gray-200 rounded-md p-4 text-gray-700 space-y-6">
       {/* Delivery Section */}
       <div>
-      <h2 className="flex items-center text-[20px] leading-[26px] font-bold text-[#202020] mb-2">
-  <Truck
-    className="w-[18px] h-[18px] text-[#202020] font-black mr-2"
-    style={{ fontFamily: '"Font Awesome 6 Pro", sans-serif' }}
-  />
-  Delivery
-</h2>
+        <h2 className="flex items-center text-[20px] leading-[26px] font-bold text-[#202020] mb-2">
+          <Truck className="w-[18px] h-[18px] text-[#202020] font-black mr-2" />
+          Delivery
+        </h2>
         <div className="ml-6 space-y-2 text-sm">
-        <div>
-  <p className="text-[14px] leading-[18px] font-bold text-[#202020] font-roboto">
-    Standard Delivery
-  </p>
-  <p className="text-[14px] leading-[22px] font-normal text-[#696969] font-roboto">
-    3-5 working days
-  </p>
-</div>
+          <div>
+            <p className="text-[14px] leading-[18px] font-bold text-[#202020] font-roboto">
+              Standard Delivery
+            </p>
+            <p className="text-[14px] leading-[22px] font-normal text-[#696969] font-roboto">
+              3-5 working days
+            </p>
+          </div>
 
           <div className="flex items-start">
-          
-          <div>
-  <p className="text-[14px] leading-[18px] font-bold text-[#202020] font-roboto">
-    Booking Money Required
-  </p>
-  <p className="text-[14px] leading-[22px] font-normal text-[#696969] font-roboto">
-    Booking money: b300
-  </p>
-</div>
-
+            <div>
+              <p className="text-[14px] leading-[18px] font-bold text-[#202020] font-roboto">
+                Booking Money Required
+              </p>
+              <p className="text-[14px] leading-[22px] font-normal text-[#696969] font-roboto">
+                Booking money: b300
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Service Section */}
       <div>
-      <h2 className="flex items-center mb-2 text-[20px] leading-[26px] font-bold text-[#202020] font-roboto">
-  <ShieldCheck
-    className="w-[18px] h-[18px] text-[#202020] font-black mr-2"
-    style={{ fontFamily: '"Font Awesome 6 Pro", sans-serif' }}
-  />
-  Service
-</h2>
+        <h2 className="flex items-center mb-2 text-[20px] leading-[26px] font-bold text-[#202020] font-roboto">
+          <ShieldCheck className="w-[18px] h-[18px] text-[#202020] font-black mr-2" />
+          Service
+        </h2>
 
-<div className="ml-6 space-y-2 text-[14px] leading-[18px] text-[#202020] font-roboto">
-  <p className="font-bold">100% Authentic</p>
-  <p className="font-bold">6 months brand warranty</p>
-  <a
-    href="#"
-    className="text-[#2D4BA8] text-[14px] leading-[22px] font-normal hover:underline inline-block"
-  >
-    Click here for product warranty policy
-  </a>
-</div>
-
+        <div className="ml-6 space-y-2 text-[14px] leading-[18px] text-[#202020] font-roboto">
+          <p className="font-bold">100% Authentic</p>
+          <p className="font-bold">6 months brand warranty</p>
+          <a
+            href="#"
+            className="text-[#2D4BA8] text-[14px] leading-[22px] font-normal hover:underline inline-block"
+          >
+            Click here for product warranty policy
+          </a>
+        </div>
       </div>
 
-     {/* Sold By Section */}
-<div>
-  <h2 className="flex items-center text-[20px] leading-[26px] font-bold text-[#202020] mb-2">
-    <Shield className="w-5 h-5 text-[#606060] mr-2" />
-    Sold By
-  </h2>
-  <p className="ml-6 text-[14px] leading-[22px] font-bold text-[#010106] underline">
-    Walton Home Appliances
-  </p>
-</div>
-
+      {/* Sold By Section */}
+      <div>
+        <h2 className="flex items-center text-[20px] leading-[26px] font-bold text-[#202020] mb-2">
+          <Shield className="w-5 h-5 text-[#606060] mr-2" />
+          Sold By
+        </h2>
+        <p className="ml-6 text-[14px] leading-[22px] font-bold text-[#010106] underline">
+          Walton Home Appliances
+        </p>
+      </div>
 
       {/* Share Section */}
       <div>
-
-<h2 className="flex items-center text-[20px] leading-[26px] font-bold text-[#202020] mb-2">
-  <Share className="w-[18px] h-[18px] text-[#202020] font-extrabold mr-2" />
-  Share
-</h2>
-
+        <h2 className="flex items-center text-[20px] leading-[26px] font-bold text-[#202020] mb-2">
+          <Share className="w-[18px] h-[18px] text-[#202020] font-extrabold mr-2" />
+          Share
+        </h2>
         <div className="flex flex-wrap gap-3 text-gray-600 ml-1 mt-4">
           {/* Facebook */}
           <a
@@ -225,7 +204,6 @@ const ProductSidebar: React.FC = () => {
           >
             <TelegramIcon />
           </a>
-        
           {/* Skype */}
           <a
             href="#"
