@@ -5,10 +5,19 @@ const Breadcrumb: React.FC = () => {
   return (
     <nav
       aria-label="Breadcrumb"
-      style={{ fontFamily: 'Roboto, sans-serif' }}
-      className="shadow-sm rounded-lg p-4 ml-[92px] max-w-screen-xl font-normal"
+      // Apply Roboto font family, normal (400) weight
+      style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}
+      // Only apply left margin on md and above
+      className="shadow-sm rounded-lg p-4 md:ml-[92px] max-w-screen-xl font-normal"
     >
-      <ol className="flex flex-wrap items-center gap-1 text-[14px] leading-[22px] text-[#010106]">
+      {/* 
+        Below md:
+          - text-[12px] leading-[19px]
+        From md and up:
+          - text-[14px] leading-[22px]
+      */}
+      <ol className="flex flex-wrap items-center gap-1 text-[12px] leading-[19px] md:text-[14px] md:leading-[22px] text-[#010106]">
+        
         <li className="flex items-center">
           <a href="#" className="hover:text-blue-600 transition-colors">
             Home

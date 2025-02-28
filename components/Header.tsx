@@ -41,17 +41,19 @@ const Header: React.FC = () => {
             <ShoppingCart size={24} />
           </button>
 
+          {/* Heart icon hidden on small devices */}
           <button
             type="button"
-            className="p-2 text-black transition-colors 
+            className="hidden sm:flex p-2 text-black transition-colors 
                        hover:bg-gray-100 focus:outline-none"
           >
             <Heart size={24} />
           </button>
 
+          {/* User icon hidden on small devices */}
           <button
             type="button"
-            className="p-2 text-black transition-colors 
+            className="hidden sm:flex p-2 text-black transition-colors 
                        hover:bg-gray-100 focus:outline-none"
           >
             <User size={24} />
