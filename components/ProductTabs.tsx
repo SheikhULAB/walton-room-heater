@@ -7,9 +7,10 @@ const ProductTabs: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'Description' | 'Reviews'>('Description');
 
   return (
-    <div className="ml-[92px] p-1">
+    // Use a responsive margin: no margin on mobile and a left margin on medium+ screens.
+    <div className="ml-0 md:ml-[92px] p-1">
       {/* Tabs */}
-      <div className="flex space-x-2">
+      <div className="flex flex-wrap space-x-2">
         <button
           onClick={() => setActiveTab('Description')}
           className={`px-4 py-2 rounded border transition-colors text-[16px] leading-[22px] font-bold font-roboto ${
@@ -42,8 +43,8 @@ const ProductTabs: React.FC = () => {
         )}
         {activeTab === 'Reviews' && (
           <div>
-          <RelatedProducts />
-         </div>
+            <RelatedProducts />
+          </div>
         )}
       </div>
     </div>

@@ -1,6 +1,5 @@
-"use client"; // Only needed if you’re in the new Next.js App Router (app/ directory)
-
-import React from "react";
+"use client";
+import React from 'react';
 import Image from "next/image";
 import { ShoppingCart } from "lucide-react";
 
@@ -65,7 +64,7 @@ const RelatedProducts: React.FC = () => {
           Related Products
         </h2>
 
-        {/* Grid layout: 1 col on smallest, up to 5 cols on XL */}
+        {/* Grid layout: 1 column on smallest screens, up to 5 on extra-large */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {products.map((product) => (
             <div
@@ -102,6 +101,7 @@ const RelatedProducts: React.FC = () => {
                     alt={product.name}
                     width={100}
                     height={100}
+                    className="w-full h-auto"
                   />
                 </div>
               </div>

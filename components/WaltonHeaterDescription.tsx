@@ -5,7 +5,8 @@ import React from "react";
 const WaltonHeaterDescription: React.FC = () => {
   return (
     <section className="w-full bg-white py-8">
-      <div className="mx-auto max-w-7xl px-4">
+      {/* Enhanced container padding for mobile */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Main Heading */}
         <h1 className="mb-6 text-xl font-semibold text-gray-800 sm:text-2xl">
           Walton Room Heater | Model: WRH-PTC20X
@@ -93,7 +94,7 @@ const WaltonHeaterDescription: React.FC = () => {
             </li>
             <li>
               <strong>Cool Touch Exterior:</strong> Maintains a safe temperature
-              around casing in case of excessive temperature.
+              around the casing in case of excessive heat.
             </li>
             <li>
               <strong>Uniform PTC Element:</strong> Provides precise temperature
